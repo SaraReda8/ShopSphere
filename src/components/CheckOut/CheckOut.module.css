@@ -1,0 +1,77 @@
+.checkoutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.checkoutCard {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.648);
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+    max-width: 900px;
+    width: 100%;
+}
+
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.checkoutImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.imageContainer:hover .checkoutImage {
+    transform: scale(1.05);
+}
+
+.optionsContainer {
+    padding: 40px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.checkoutButtons .fillButton {
+    background-color: var(--main-color); /* Adjust to your theme color */
+    color: #fff;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.checkoutButtons .fillButton:hover {
+    background-color: darken(var(--main-color), 10%);
+}
+
+@media (max-width: 768px) {
+    .checkoutCard {
+        flex-direction: column;
+    }
+    .optionsContainer {
+        padding: 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

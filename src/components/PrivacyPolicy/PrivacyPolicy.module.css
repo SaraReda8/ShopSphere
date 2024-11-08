@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+/* General container styling */
+.container {
+  margin:20px 100px;
+  animation: fadeIn 1s ease-in-out;
+  color: #000000;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+/* Card Body */
+.card-body {
+  line-height: 1.8;
+  color: #000000
+}
+
+/* Title styling with animation */
+.title h1 {
+  font-family: 'Merriweather', serif;
+  color: #0b0b0b;
+  font-size: 3rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Keyframe for fadeInUp animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+

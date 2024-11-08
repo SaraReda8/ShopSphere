@@ -1,0 +1,40 @@
+/* Adjusted styling to remove the right side */
+
+.registerCard {
+    display: flex;
+    width: 80%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0);
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    flex-direction: column; /* Stacked form */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.leftSide {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Remove .rightSide completely */
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .registerCard {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+.btn{
+    display:inline;
+   color: var(--main-color);
+
+}
