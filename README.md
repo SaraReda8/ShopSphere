@@ -6,7 +6,7 @@ ShopSphere is a fully functional e-commerce website built using React.js. The pr
 ## Table of Contents
 1. [Demo](#demo)
 2. [Features](#features)
-3. [Tech Stack & Packages](#tech-stack--packages)
+3. [Tech Stack ](#tech-stack)
 4. [Installation](#installation)
 5. [Getting Started](#getting-started)
 6. [Usage](#usage)
@@ -58,7 +58,7 @@ Explore the live version of ShopSphere: [ShopSphere Live Demo](https://your-demo
 20. **Animated Checkout Buttons**: Checkout page features animated buttons for 'Cash on Delivery' and 'Online Payment,' adding a visual appeal to the payment process.
 
 
-## Tech Stack & Packages
+## Tech Stack 
 
 ### **1. Frontend Framework**
 - **React**: Core JavaScript library for building interactive user interfaces.
@@ -110,30 +110,7 @@ Explore the live version of ShopSphere: [ShopSphere Live Demo](https://your-demo
 - **Web Vitals**: Collects key performance metrics (like loading, interactivity) to help optimize user experience.
 
 
-
-#### Package List
-```json
-{
-  "@fortawesome/fontawesome-free": "^6.6.0",
-  "@fortawesome/fontawesome-svg-core": "^6.6.0",
-  "@fortawesome/free-regular-svg-icons": "^6.6.0",
-  "@fortawesome/free-solid-svg-icons": "^6.6.0",
-  "@fortawesome/react-fontawesome": "^0.2.2",
-  "@tanstack/react-query": "^5.52.2",
-  "axios": "^1.7.3",
-  "bootstrap": "^5.3.3",
-  "formik": "^2.4.6",
-  "jwt-decode": "^4.0.0",
-  "react": "^18.3.1",
-  "react-bootstrap": "^2.10.4",
-  "react-router-dom": "^6.27.0",
-  "react-slick": "^0.30.2",
-  "slick-carousel": "^1.8.1",
-  "react-hot-toast": "^2.4.1",
-  "react-icons": "^5.2.1"
-}
-
-## 4. Installation
+## Installation
 To get started with ShopSphere:
 ```bash
 # Clone the repository
@@ -147,3 +124,4 @@ npm install
 
 # Start the development server
 npm start
+
