@@ -51,7 +51,7 @@ export default function WhyShopSphere () {
                     <div key={index} className="col-md-4 mb-4 ">
                         <div className={`card h-100 ${Style.card}`}>
                             <div className="card-body d-flex flex-column align-items-center">
-                                {card.image && <img src={card.image} alt={card.title} className={`mb-3 ${Style.icon}`} />}
+                                {card.image && <img src={card.image} alt={card.title} className={`mb-3 loading="lazy" ${Style.icon}`} />}
                                 {card.icon && <i className={`fs-1 mb-3 ${card.icon} ${Style.icon}`}></i>}
                                 <h5 className={`card-title mt-3 ${Style['card-title']}`}>{card.title}</h5>
                                 <p className={`card-text ${Style['card-text']}`}>{card.description}</p>

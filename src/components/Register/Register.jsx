@@ -162,6 +162,12 @@ export default function Register() {
                         </label>
                     </div>
 
+                    {/* Error Message */}
+                    {error && <div className='alert alert-danger'>{error}</div>}
+
+                    {/* Success Message */}
+                    {successMessage && <div className='alert alert-success'>{successMessage}</div>}
+
                     {/* Register Button */}
                     {isLoading ? (
                         <button className='btn bg-main text-white mt-2' type='button' disabled>

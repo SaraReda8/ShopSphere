@@ -17,7 +17,7 @@ export default function Home() {
     <>
       {x}
       <div className={Style.Cover}>
-        <img src={Cover} alt="HomeImg" className={Style.Cover} />
+        <img src={Cover} alt="HomeImg" loading="lazy" className={Style.Cover} />
       </div>
 
       {/* First UniqueSection with default layout */}

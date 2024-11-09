@@ -11,7 +11,7 @@ const Soon = () => (
       {ProductsComingSoon.map((product) => (
         <div className="col-md-4 mb-4" key={product.id}>
           <div className={`card ${styles.card}`}>
-            <img src={product.img} className={styles.productImg} alt={product.name} />
+            <img src={product.img} className={styles.productImg} alt={product.name} loading="lazy" />
             <div className="card-body">
               <h5 className="card-title">{product.name}</h5>
               <p className="card-text">{product.description}</p>

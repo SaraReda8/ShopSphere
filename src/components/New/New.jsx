@@ -1,8 +1,7 @@
 import React from 'react';
-import { FaShippingFast, FaSnowflake, FaShoppingBag } from 'react-icons/fa';
+import { FaSnowflake, FaShoppingBag } from 'react-icons/fa';
 import styles from './New.module.css';
 import imageSrc2 from '../../Assets/images/greencoat.jpg'; // Replace with actual path
-import MainSlider from './../MainSlider/MainSlider';
 import comingsoon from '../../Assets/images/comingsoon3.jpg'
 import Soon from './../Soon/Soon';
 

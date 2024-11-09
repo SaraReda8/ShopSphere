@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import { Link } from 'react-router-dom'; 
-import { FaGithubSquare, FaCodepen, FaYoutube, FaFacebookSquare, FaTwitterSquare, FaInstagram, FaTiktok, FaSnapchatSquare, FaTelegramPlane } from 'react-icons/fa';
+import {  FaCodepen,FaFacebookSquare, FaInstagram, FaTiktok, FaSnapchatSquare, FaTelegramPlane } from 'react-icons/fa';
 
 export default function Footer() {
     return (

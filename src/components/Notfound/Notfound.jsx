@@ -1,5 +1,4 @@
 import React from 'react';
-import Style from './Notfound.module.css';
 import { Link } from 'react-router-dom';
 
 

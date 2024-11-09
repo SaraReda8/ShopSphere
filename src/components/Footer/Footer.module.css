@@ -1,4 +1,43 @@
-/* Animation for Useful Links */
+/* Footer Styles */
+.footer {
+  background-color: rgb(69, 67, 67);
+  padding: 1rem;
+  color: #e8efed;
+  width: 1500px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #e8efed;
+}
+
+/* Responsive Columns for Smaller Devices */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .col-lg-4, .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 70%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /* Center the social icons */
+  .button {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* Footer Glow Animation */
 @keyframes glow {
   0% {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
@@ -36,30 +75,12 @@
   transform-origin: bottom right;
 }
 
-.link-hover-effect:hover {
-  color: var(--main-color)
-}
-
 .link-hover-effect:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-/* Footer Styles */
-.footer {
-  background-color: rgb(69, 67, 67);/* Customize as per your design */
-  padding: 1rem;
-  color: #e8efed; /* Text color for footer */
-}
-.link{
-  color: white;
-  text-decoration: none;
-}
-.link:hover{
-  /* transition: color 0.3s ease; */
-  text-decoration: underline;
-  color: #e8efed;
-}
+/* Social Button Styling */
 .button {
   width: 280px;
   height: 60px;

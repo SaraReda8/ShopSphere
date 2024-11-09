@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Row, Col, Form, Button } from 'react-bootstrap';
 import { Formik, Field, ErrorMessage, Form as FormikForm } from 'formik';
 import * as Yup from 'yup';
 import Style from './ContactUs.module.css'; 
@@ -32,7 +32,7 @@ export default function ContactUs() {
       {/* Image */}
       <div className={Style.contactSection}>
       <div className={Style.overlay}>
-        <img src={contactus} alt="Contact Us" className={Style.contactImage} />
+        <img src={contactus} alt="Contact Us"  loading="lazy" className={Style.contactImage} />
         <div className={Style.textOverlay}>
           <h2 className='special text-white '>Contact us</h2>
           <p className='txt'>ShopSphere is ready to provide the right solution according to your needs</p>

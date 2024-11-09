@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { CartContext } from '../../Context/CartContext';
-import { FaTrashAlt, FaShoppingCart, FaCreditCard,FaCashRegister,  FaTrash } from 'react-icons/fa';
+import { FaTrashAlt, FaShoppingCart,FaCashRegister,  FaTrash } from 'react-icons/fa';
 import { BallTriangle } from 'react-loader-spinner';
 import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Field, Form } from 'formik';
-import axios from 'axios';
+// import axios from 'axios';
 
 export default function Cart() {
     const { getLoggedUserCart, removeCartItem, updateProductQuantity, clearCartItems } = useContext(CartContext);

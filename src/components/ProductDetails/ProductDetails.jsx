@@ -72,7 +72,7 @@ export default function ProductDetails() {
                         <Slider {...settings}>
                             {product.images.map((img, index) => (
                                 <div key={index}>
-                                    <img src={img} alt={`Product Image ${index}`} className={`${styles.productImage} img-fluid`} />
+                                    <img src={img} alt={` ${index}`} className={`${styles.productImage} img-fluid`} />
                                 </div>
                             ))}
                         </Slider>

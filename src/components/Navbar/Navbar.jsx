@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Style from './Navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTshirt, faTags, faLayerGroup, faCaretDown, faShoppingCart,faHeart } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from './../../Context/UserContext';
 import { CartContext } from './../../Context/CartContext';
-import { Link as ScrollLink, scroller } from 'react-scroll';
+import {  scroller } from 'react-scroll';
 import logo from '../../Assets/images/logoo.png'
 
 export default function Navbar() {

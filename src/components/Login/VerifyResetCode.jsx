@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Style from './VerifyResetCode.module.css';
-import { FaKey } from 'react-icons/fa';
 
 const VerifyResetCodeSchema = Yup.object().shape({
   resetCode: Yup.string()

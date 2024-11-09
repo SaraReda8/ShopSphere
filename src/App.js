@@ -12,20 +12,16 @@ import Categories from './components/Categories/Categories';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import CartContextProvider from './Context/CartContext';
 import  { Toaster } from 'react-hot-toast';
-import UserContextProvider, { UserContext } from './Context/UserContext';
-import { useContext, useEffect } from 'react';
+import UserContextProvider from './Context/UserContext';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import { CounterProvider } from './Context/CounterContext';
-import UserProfile from './components/UserProfile/UserProfile';
 import FAQ from './components/FAQ/FAQ';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import TermOfServices from './components/TermOfServices/TermOfServices';
 import Address from './components/address/address';
-import Allorders from './components/allorders/allorders';
 import Wishlist from './components/WishList/WishList';
 import { WishlistProvider } from './Context/WishListContext';
 import Productcom from './components/Product/Productcom';
-import ProductCard from './components/Product/ProductCard';
 import ForgetPassword from './components/Login/ForgotPassword';
 import VerifyResetCode from './components/Login/VerifyResetCode';
 import ResetPassword from './components/Login/ResetPassword';
@@ -71,7 +67,6 @@ const routers = createBrowserRouter([
 
      
       { path: 'address', element:<ProtectedRoute> <Address /></ProtectedRoute> },
-      { path: 'Allorders', element:<ProtectedRoute> <Allorders /></ProtectedRoute> },
 
 
 
