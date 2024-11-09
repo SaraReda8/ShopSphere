@@ -66,13 +66,13 @@ export default function Footer() {
     <FaInstagram />
   </a>
   <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-main me-1">
-          <FaTiktok size={24} />
+          <FaTiktok  />
         </a>
         <a href="https://snapchat.com" target="_blank" rel="noopener noreferrer" className="text-main me-1">
-          <FaSnapchatSquare size={24} />
+          <FaSnapchatSquare  />
         </a>
         <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="text-main me-1">
-          <FaTelegramPlane size={24} />
+          <FaTelegramPlane  />
           </a>
 </div>
 
