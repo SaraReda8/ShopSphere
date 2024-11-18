@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ShopSphere/static/css/main.c411d11f.css",
-    "main.js": "/ShopSphere/static/js/main.25450da9.js",
+    "main.js": "/ShopSphere/static/js/main.3b23d4ea.js",
     "static/media/card.png": "/ShopSphere/static/media/card.40b1d9f72c9cd88ad585.png",
     "static/media/blog-img-2.jpeg": "/ShopSphere/static/media/blog-img-2.69e5e73301d9616ba8c6.jpeg",
     "static/media/elec1.jpg": "/ShopSphere/static/media/elec1.eb8f4282b2c21b919908.jpg",
@@ -57,10 +57,10 @@
     "static/media/slick.woff": "/ShopSphere/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ShopSphere/index.html",
     "main.c411d11f.css.map": "/ShopSphere/static/css/main.c411d11f.css.map",
-    "main.25450da9.js.map": "/ShopSphere/static/js/main.25450da9.js.map"
+    "main.3b23d4ea.js.map": "/ShopSphere/static/js/main.3b23d4ea.js.map"
   },
   "entrypoints": [
     "static/css/main.c411d11f.css",
-    "static/js/main.25450da9.js"
+    "static/js/main.3b23d4ea.js"
   ]
 }
