@@ -1,0 +1,65 @@
+.productDetails {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.productImage {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.productImage:hover {
+    transform: scale(1.05);
+}
+
+.productTitle {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.productDescription {
+    font-size: 1rem;
+    color: #555;
+}
+
+.productPrice {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.brand, .stock, .sold {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.inStock {
+    color: green;
+}
+
+.outOfStock {
+    color: red;
+}
+
+.rating {
+    font-size: 1.2rem;
+    color: #ffb400;
+}
+
+
+
+.wishlistButton {
+    font-size: 1rem;
+    color: #e63946;
+    transition: transform 0.3s ease;
+}
+
+.wishlistButton:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

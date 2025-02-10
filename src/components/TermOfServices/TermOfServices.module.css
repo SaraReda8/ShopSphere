@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Container styling */
+.container {
+  margin:20px 100px;
+  animation: fadeIn 1s ease-in-out;
+  max-width: 1500px;
+
+}
+
+/* Card styling */
+.card {
+  border: none;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+/* Card header styling */
+.card-header {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-bottom: none;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #333;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: var(--main-color);
+  margin: 0.5rem auto 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.title:hover::after {
+  width: 120px;
+}
+
+
+
+/* Animation for the entire content */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

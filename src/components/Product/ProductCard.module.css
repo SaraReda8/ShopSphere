@@ -1,0 +1,21 @@
+.productCard {
+    position: relative;
+  }
+  
+  .addToCartContainer {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .product:hover .addToCartContainer {
+    opacity: 1;
+  }
+  
+  .wishlistBtn {
+    /* Ensure the wishlist button is always visible */
+  }
+  
+  .addToCartBtn {
+margin-bottom: 5px;  
+padding: 15px;
+}

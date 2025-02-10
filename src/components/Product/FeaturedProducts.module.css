@@ -1,0 +1,45 @@
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+}
+
+.product .btn {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.wishlist-btn {
+  background: none;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+
+
+.card-img-top {
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}

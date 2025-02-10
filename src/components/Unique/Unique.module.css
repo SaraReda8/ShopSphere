@@ -1,0 +1,165 @@
+.uniqueContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px; /* Reduced padding for smaller devices */
+}
+
+/* Styling for each unique section */
+.uniqueSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+  gap: 10px;
+}
+
+/* Styling for the image container with circles */
+.imageContainer {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-out forwards;
+  max-width: 40vw; /* Restrict max width on larger screens */
+}
+
+.circle1,
+.circle2 {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 128, 128, 0.1);
+  animation: float 6s ease-in-out infinite;
+  width: 10vw; /* Smaller default size */
+  height: 10vw;
+}
+
+.circle1 {
+  top: 2vw;
+  left: 5vw;
+  z-index: -1;
+}
+
+.circle2 {
+  bottom: 2vw;
+  right: 5vw;
+  background-color: var(--main-color);
+  z-index: -1;
+}
+
+.uniqueImage {
+  width: 25vw; /* Adjusted to a smaller default size */
+  height: 25vw;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomIn 1.2s ease-out forwards 0.5s;
+}
+
+/* Styling for the text section */
+.textContent {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.textContent h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.textContent p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+  .uniqueSection {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px; /* Reduced padding */
+  }
+
+  .textContent {
+      padding-left: 0;
+  }
+
+  .uniqueImage {
+      width: 60vw; /* Adjusted to fit smaller screens */
+      height: 60vw;
+  }
+
+  .circle1,
+  .circle2 {
+      width: 15vw; /* Increased size slightly for visibility */
+      height: 15vw;
+  }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+/* Reverse direction styling for the second section */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Additional responsive tweaks for extra small devices */
+@media (max-width: 480px) {
+  .uniqueContainer {
+      padding: 10px 5px; /* Extra padding reduction */
+  }
+
+  .uniqueSection {
+      gap: 5px;
+  }
+
+  .uniqueImage {
+      width: 70vw; /* Larger on very small screens */
+      height: 70vw;
+  }
+
+  .circle1,
+  .circle2 {
+      width: 12vw; /* Smaller circles on very small screens */
+      height: 12vw;
+  }
+
+  .textContent p {
+      font-size: 0.9rem; /* Slightly smaller font for readability */
+  }
+}

@@ -1,0 +1,173 @@
+.uniqueSection2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    position: relative;
+    animation: fadeInSection 1.5s ease-out forwards;
+    margin-left: 10rem;
+}
+
+.textContent2 {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.textContent2 h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.textContent2 p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-left: 1rem;
+}
+
+.imageContainer2 {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Main Image Styling */
+.uniqueImage2 {
+    width: 40%; /* Adjust this based on your layout needs */
+    height: auto;
+    border-radius: 20% 80% 70% 30% / 30% 50% 70% 50%; /* Creates a custom curve similar to your example */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+/* Background Circles */
+.circleTopRight {
+    position: absolute;
+    width: 200px; /* Adjust size to match example */
+    height: 200px;
+    background-color: rgba(107, 196, 183, 0.3); /* Light green color */
+    border-radius: 50%;
+    top: -40px; /* Adjust positioning */
+    right: 150px;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .uniqueSection2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .textContent2 {
+        padding-right: 0;
+    }
+
+    .uniqueImage2 {
+        width: 50%; /* Resize image for smaller screens */
+        height: auto;
+    }
+
+    /* Resize circles for smaller screens */
+    .circleTopRight{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Styling for icons within text */
+.iconText {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: var(--main-color); /* Replace with your main theme color */
+    margin-right: 8px;
+}
+
+/* Button styling for the Shop link */
+.shopButton {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2d89ff; /* Adjust button color */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.comingsoonImage {
+    width: 100vw;
+    max-width: 1600px; /* Increase max-width to make the image larger */
+    height: 70vh; /* Adjust height to control vertical space, keeping it responsive */
+    object-fit: cover;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  
+  .overlay {
+    position: relative;
+    display: inline-block; /* Makes overlay match the size of the image */
+  }
+  
+  .overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(116, 117, 109, 0.228); /* Gray overlay layer */
+    z-index: 1;
+  }
+  
+  .textOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(6, 5, 5);
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .textOverlay h2 {
+    font-size: 8rem; 
+    margin: 0;
+    color: black;
+  }
+  
+  .textOverlay p {
+    font-size: 1.3rem; 
+    color: rgba(26, 24, 24, 0.635);
+  }

@@ -1,0 +1,67 @@
+.container {
+  padding: 20px;
+}
+
+.card {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.card:hover {
+  border-color: var(--main-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.icon {
+  max-width: 100px; /* Unified size for images and icons */
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color:var(--dark-color);
+  text-align: center;
+}
+
+.card-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}

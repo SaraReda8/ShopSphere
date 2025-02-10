@@ -1,0 +1,71 @@
+
+
+/* Card Styling */
+.brandCard {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #f9f9f9, #f0f8ff);
+  position: relative;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+.brandCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Image */
+.cardImgTop {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Card Body Styling */
+.cardBody {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+/* Card Title */
+.cardTitle {
+  font-size: 1.3rem;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* Card Text (Description) */
+.cardText {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  .cardImgTop {
+    height: 140px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+}

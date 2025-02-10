@@ -1,0 +1,14 @@
+.Cover {
+    width: 100vw;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.Cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
