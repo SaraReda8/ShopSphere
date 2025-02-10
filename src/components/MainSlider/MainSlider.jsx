@@ -3,10 +3,10 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import styles from './MainSlider.module.css';
-import headerImg2 from '../../Assets/images/elec1.jpg';
-import headerImg1 from '../../Assets/images/blog-img-2.jpeg';
-import headerImg3 from '../../Assets/images/fashion.jpg';
-import headerImg5 from '../../Assets/images/delivery.jpg'
+import headerImg2 from '../../Assets/images/elec1.webp';
+import headerImg1 from '../../Assets/images/blog-img-2.webp';
+import headerImg3 from '../../Assets/images/fashion.webp';
+import headerImg5 from '../../Assets/images/delivery.webp'
 export default function CarouselSection() {
   return (
     <div className={`${styles.heroSection} `}> 

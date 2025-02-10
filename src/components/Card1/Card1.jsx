@@ -1,6 +1,6 @@
 import React from 'react';
 import Style from './Card1.module.css';
-import cardimg from '../../Assets/images/card.png';
+import cardimg from '../../Assets/images/card.webp';
 import { Link } from 'react-router-dom';
 
 export default function Card1() {

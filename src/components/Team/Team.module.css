@@ -1,0 +1,120 @@
+/* General container styles */
+.teamContainer {
+  padding: 50px;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(3, 1fr));
+  gap: 50px;
+  justify-items: center;
+}
+
+.teamMember {
+  background-color: var(--bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teamMember:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.profileImage {
+  width: 170px;
+  height: 220px;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: opacity 1s ease-in-out, transform 0.3s ease;
+}
+
+.teamMember:hover .profileImage {
+  transform: scale(1.1);
+}
+
+.memberName {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  transition: color 0.3s ease;
+}
+
+.teamMember:hover .memberName {
+  color: var(--primary-color);
+}
+
+.memberRole {
+  font-size: 1rem;
+  color: var(--gray-color);
+  margin-top: 5px;
+}
+
+.memberResponsibility {
+  font-size: 0.9rem;
+  color: var(--darkgray-color);
+  margin-top: 10px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .memberName {
+    font-size: 1.1rem;
+  }
+
+  .memberRole {
+    font-size: 0.9rem;
+  }
+
+  .memberResponsibility {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures exactly 3 columns */
+  gap: 50px;
+  justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}

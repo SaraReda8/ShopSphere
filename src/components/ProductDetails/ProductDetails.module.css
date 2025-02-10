@@ -63,3 +63,20 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+@media (max-width: 768px) {
+    .productDetails {
+        padding: 2rem 1rem;
+    }
+
+    .productTitle {
+        font-size: 1.5rem;
+    }
+
+    .productPrice {
+        font-size: 1.3rem;
+    }
+
+    .addToCart {
+        font-size: 1rem;
+    }
+}

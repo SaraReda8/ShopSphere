@@ -10,6 +10,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(0);
   animation: fadeInUp 0.5s ease-out;
+  margin: 0 auto; /* Centers the card horizontally */
 }
 
 .card:hover {
@@ -19,7 +20,7 @@
 }
 
 .icon {
-  max-width: 100px; /* Unified size for images and icons */
+  max-width: 80px; /* Uniform size for images and icons */
   height: auto;
   border-radius: 10px;
 }
@@ -28,7 +29,7 @@
   font-family: 'Arial', sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
-  color:var(--dark-color);
+  color: var(--dark-color);
   text-align: center;
 }
 
@@ -55,6 +56,7 @@
 @media (max-width: 768px) {
   .card {
     margin-bottom: 20px;
+    width: 90%; /* Ensures cards occupy most of the container width */
   }
 
   .card-title {
@@ -63,5 +65,40 @@
 
   .card-text {
     font-size: 0.9rem;
+  }
+}
+
+/* For larger screens (laptop/desktop) */
+@media (min-width: 992px) {
+  .card {
+    margin-bottom: 20px;
+    width: 90%;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
+/* Ensuring two items per row */
+@media (min-width: 576px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-md-6 {
+    width: 50%;
+    padding: 10px;
+  }
+
+  .col-lg-4 {
+    width: 33.33%;
+    padding: 10px;
   }
 }

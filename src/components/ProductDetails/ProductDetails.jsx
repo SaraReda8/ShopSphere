@@ -68,7 +68,7 @@ export default function ProductDetails() {
             </Helmet>
             <div className={`container py-4 ${styles.productDetails}`}>
                 <div className="row">
-                    <div className="col-md-5">
+                    <div className="col-lg-5 col-md-6 col-12">
                         <Slider {...settings}>
                             {product.images.map((img, index) => (
                                 <div key={index}>
@@ -77,7 +77,7 @@ export default function ProductDetails() {
                             ))}
                         </Slider>
                     </div>
-                    <div className="col-md-7">
+                    <div className="col-lg-7 col-md-6 col-12">
                         <h3 className={`${styles.productTitle} mb-3`}>{product.title}</h3>
                         <p className={`${styles.productDescription} mb-3`}>{product.description}</p>
                         <h6 className="text-muted mb-2">{product.category?.name}</h6>
@@ -97,10 +97,10 @@ export default function ProductDetails() {
                             </span>
                         </div>
 
-                        <button className={`${styles.addToCart} btn btn4 w-100`} onClick={() => handleAddToCart(product.id)}>
+                        <button className={`${styles.addToCart} btn btn4 w-100 mb-2`} onClick={() => handleAddToCart(product.id)}>
                             Add to Cart
                         </button>
-                        <button className={`${styles.wishlistButton} btn w-100 mt-2`} onClick={() => handleAddToWishlist(product.id)}>
+                        <button className={`${styles.wishlistButton} btn w-100`} onClick={() => handleAddToWishlist(product.id)}>
                             <FontAwesomeIcon icon={isInWishlist ? solidHeart : regularHeart} className="text-danger" size="2x" />
                         </button>
                     </div>

@@ -1,5 +1,5 @@
 import './App.css';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Layout from './components/Layout/Layout';
 import Cart from './components/Cart/Cart';
@@ -32,78 +32,53 @@ import AboutUs from './components/AboutUs/AboutUs';
 import CheckOut from './components/CheckOut/CheckOut';
 import New from './components/New/New';
 
+const routers = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },  // Default starting page
+      { path: 'register', element: <Register /> },
+      { path: 'login', element: <Login /> },
+      { path: 'ForgetPassword', element: <ForgetPassword /> },
+      { path: 'VerifyResetCode', element: <VerifyResetCode /> },
+      { path: 'ResetPassword', element: <ResetPassword /> },
+      { path: 'FAQ', element: <FAQ /> },
+      { path: 'ContactUS', element: <ContactUs /> },
+      { path: 'PrivacyPolicy', element: <PrivacyPolicy /> },
+      { path: 'TermOfService', element: <TermOfServices /> },
+      { path: 'WishList', element: <Wishlist /> },
+
+      { path: 'FeaturedProducts', element: <ProtectedRoute><FeaturedProducts /></ProtectedRoute> },
+      { path: 'AboutUs', element: <ProtectedRoute><AboutUs /></ProtectedRoute> },
+
+      { path: 'products', element: <ProtectedRoute><Products /></ProtectedRoute> },
+      { path: 'Productcom', element: <ProtectedRoute><Productcom /></ProtectedRoute> },
+      { path: 'ProductDetails/:id', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
+      { path: 'cart', element: <ProtectedRoute><Cart /></ProtectedRoute> },
+      { path: 'CheckOut', element: <ProtectedRoute><CheckOut /></ProtectedRoute> },
+
+      { path: 'CashOnDelivery', element: <ProtectedRoute><CashOnDelivery /></ProtectedRoute> },
+      { path: 'New', element: <ProtectedRoute><New /></ProtectedRoute> },
+      { path: 'address', element: <ProtectedRoute><Address /></ProtectedRoute> },
+      { path: 'brands', element: <ProtectedRoute><Brands /></ProtectedRoute> },
+      { path: 'categories', element: <ProtectedRoute><Categories /></ProtectedRoute> },
+      { path: '*', element: <Notfound /> },
+    ],
+  },
+],
+{
+  basename: '/ShopSphere', 
+}
+);
+
 function App() {
   return (
     <WishlistProvider>
       <UserContextProvider>
         <CartContextProvider>
           <CounterProvider>
-            <Router>
-              <Layout>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/register" element={<Register />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/ForgetPassword" element={<ForgetPassword />} />
-                  <Route path="/VerifyResetCode" element={<VerifyResetCode />} />
-                  <Route path="/ResetPassword" element={<ResetPassword />} />
-                  <Route path="/FAQ" element={<FAQ />} />
-                  <Route path="/ContactUS" element={<ContactUs />} />
-                  <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-                  <Route path="/TermOfService" element={<TermOfServices />} />
-                  <Route path="/WishList" element={<Wishlist />} />
-                  <Route
-                    path="/FeaturedProducts"
-                    element={<ProtectedRoute><FeaturedProducts /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/AboutUs"
-                    element={<ProtectedRoute><AboutUs /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/products"
-                    element={<ProtectedRoute><Products /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/Productcom"
-                    element={<ProtectedRoute><Productcom /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/ProductDetails/:id"
-                    element={<ProtectedRoute><ProductDetails /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/cart"
-                    element={<ProtectedRoute><Cart /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/CheckOut"
-                    element={<ProtectedRoute><CheckOut /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/CashOnDelivery"
-                    element={<ProtectedRoute><CashOnDelivery /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/New"
-                    element={<ProtectedRoute><New /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/address"
-                    element={<ProtectedRoute><Address /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/brands"
-                    element={<ProtectedRoute><Brands /></ProtectedRoute>}
-                  />
-                  <Route
-                    path="/categories"
-                    element={<ProtectedRoute><Categories /></ProtectedRoute>}
-                  />
-                  <Route path="*" element={<Notfound />} />
-                </Routes>
-              </Layout>
-            </Router>
+            <RouterProvider router={routers} />
             <Toaster />
           </CounterProvider>
         </CartContextProvider>

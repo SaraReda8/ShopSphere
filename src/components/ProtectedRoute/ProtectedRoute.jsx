@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 export default function ProtectedRoute (props) {
-    let navigate=useNavigate();
+    let Navigate=useNavigate();
 
     if(localStorage.getItem('userToken') !== null){
         return props.children }

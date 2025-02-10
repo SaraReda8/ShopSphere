@@ -5,6 +5,7 @@
 :root {
     --main-color: rgb(0 103 71); /* Mint Green */
     --secondary-color: #ebebbe; /* Beige */
+    --blue-color:  #0171d3;
     --light-color: #faf7ee; /* Very Light Beige */
     --brown-color: #63360a;
     --dark-color: #363636; /* Dark Slate */
@@ -279,25 +280,20 @@ a, a:hover {
   }
 }
 /* Reusable Animated Button */
-.AnimatedButton {
-    position: relative;
-    margin: 10px;
-    text-decoration: none;
-    text-align: center;
+.FormButton {
+    height: 100%;
+    width: 100%;
+    border: none;
     font-size: 16px;
-    font-weight: 600;
-    display: inline-block;
-    background: linear-gradient(120deg,  rgb(0 103 71),  rgb(107, 234, 194), rgb(0 103 71));
-    background-size: 400% 400%;
-    color: #ffffff;
-    padding: 20px 50px;
-    -moz-animation: gradient 3s ease-in-out infinite;
-    -webkit-animation: gradient 3s ease-in-out infinite;
-    animation: gradient 3s ease-in-out infinite;
-    border-radius: 50px;
+    font-weight: 400;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #0171d3;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
-.AnimatedButton:hover{
-    color: #000000;
+.FormButton:hover{
+    background-color: #016dcb;
 }
 .AnimatedButton2 {
     position: relative;
@@ -387,3 +383,4 @@ html {
     color: var(--main-color);
 
   }
+ 

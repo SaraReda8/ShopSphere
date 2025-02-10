@@ -3,12 +3,17 @@
   background-color: rgb(69, 67, 67);
   padding: 1rem;
   color: #e8efed;
-  width: 1500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Link Styles */
 .link {
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .link:hover {
@@ -16,68 +21,72 @@
   color: #e8efed;
 }
 
-/* Responsive Columns for Smaller Devices */
-@media (max-width: 768px) {
-  .footer {
-    padding: 2rem 1rem;
-  }
+/* Responsive Columns */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
 
-  .col-lg-4, .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 70%;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
+.col-lg-4,
+.col-md-6 {
+  flex: 1 1 30%;
+  max-width: 30%;
+  text-align: center;
+  padding: 1rem;
+}
 
-  /* Center the social icons */
-  .button {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+@media (max-width: 1024px) {
+  .col-lg-4,
+  .col-md-6 {
+    flex: 1 1 45%;
+    max-width: 45%;
   }
 }
 
-/* Footer Glow Animation */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.5rem;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-lg-4,
+  .col-md-6 {
+    flex: 1 1 100%;
+    max-width: 80%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 16px;
+    justify-content: center;
+  }
+}
+
+/* Glow Effect */
 @keyframes glow {
   0% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px #2e952e, 0 0 15px #118311;
   }
   50% {
-    text-shadow: 0 0 20px rgb(19, 138, 9), 0 0 30px rgba(73, 86, 74, 0.5);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 25px #147e14, 0 0 30px #116e11;
   }
   100% {
-    text-shadow: 0 0 5px rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px #4ebd4e, 0 0 15px #2d932d;
   }
 }
 
 .glow {
   animation: glow 2s infinite;
-}
-
-/* Link Hover Effect */
-.link-hover-effect {
-  position: relative;
-  color: var(--main-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.link-hover-effect::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: rgba(255, 0, 0, 0.8);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: bottom right;
-}
-
-.link-hover-effect:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  color: #e8efed;
+  font-weight: bold;
 }
 
 /* Social Button Styling */

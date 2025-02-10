@@ -1,23 +1,26 @@
-import { React, useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+import Style from "./useNetwork.module.css";
 
-export default function useNetwork(){
-    let [isOnline,setIsOnline]=useState(true);
+export default function useNetwork() {
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
 
-    useEffect(()=>{
-        detectIsOnline();
-    },[]);
-    function detectIsOnline(){
-        window.addEventListener('online',function(){
-        setIsOnline(true);
-    })
-    window.addEventListener('offline',function(){
-        setIsOnline(false);
-    })
+  useEffect(() => {
+    function updateStatus() {
+      setIsOnline(navigator.onLine);
     }
 
-  
+    window.addEventListener("online", updateStatus);
+    window.addEventListener("offline", updateStatus);
 
-    return<>
-    {isOnline?<div className="network">You are online</div>:<div className="network">You are offline</div>}
-    </>
- }
+    return () => {
+      window.removeEventListener("online", updateStatus);
+      window.removeEventListener("offline", updateStatus);
+    };
+  }, []);
+
+  return (
+    <div className={`${Style.network} ${isOnline ? Style.online : Style.offline}`}>
+      {isOnline ? "You are online" : "You are offline"}
+    </div>
+  );
+}

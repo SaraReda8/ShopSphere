@@ -33,8 +33,6 @@
   transition: transform 0.3s ease;
 }
 
-
-
 .card-img-top {
   max-height: 180px;
   object-fit: cover;
@@ -42,4 +40,23 @@
 
 .card-body {
   text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .card-img-top {
+    max-height: 100px;
+  }
+
+  .card-body {
+    font-size: 0.9rem;
+  }
+
+  .product .btn {
+    font-size: 0.8rem;
+  }
 }

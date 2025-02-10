@@ -61,7 +61,7 @@ export default function Login() {
                     {successMessage && <div className="alert alert-success text-center">{successMessage}</div>}
 
                     <form onSubmit={formik.handleSubmit}>
-                    <h1 className="text-center special mt-2 mb-2">  <i class="bi bi-star me-2"></i>
+                    <h1 className="text-center special mt-2 mb-2"> 
 Welcome Back!</h1>
 
                         <div className="mb-3">

@@ -3,7 +3,7 @@ import { Row, Col, Form, Button } from 'react-bootstrap';
 import { Formik, Field, ErrorMessage, Form as FormikForm } from 'formik';
 import * as Yup from 'yup';
 import Style from './ContactUs.module.css'; 
-import contactus from '../../Assets/images/contactus.jpg'
+import contactus from '../../Assets/images/contact.jpg'
 
 export default function ContactUs() {
   const initialValues = {

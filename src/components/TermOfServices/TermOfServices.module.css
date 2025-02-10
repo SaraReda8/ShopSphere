@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-/* Container styling */
 .container {
-  margin:20px 100px;
+  margin: 0 auto; 
+  max-width: 800px;
   animation: fadeIn 1s ease-in-out;
-  max-width: 1500px;
 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh; 
+  margin-bottom: 50px;
 }
+
 
 /* Card styling */
 .card {
