@@ -9,7 +9,7 @@ import UniqueSection from "./../Unique/Unique";
 import useInView from "./../../Hooks/useInView";
 import Cover from "../../Assets/images/home5.webp";
 import Style from "./Home.module.css";
-
+import New from '../New/New'
 export default function Home() {
   let x = useNetwork();
   const [ref1, inView1] = useInView();
@@ -31,6 +31,8 @@ export default function Home() {
       </div>
 
         <FeaturedProducts />
+        <New />
+
 
       <section id="faq" className={inView1 ? Style.visible : Style.hidden}>
         <FAQ />
